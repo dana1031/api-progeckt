@@ -42,3 +42,11 @@ function validate_is_positive($field_value, &$field) {
         return true;
     }
 }
+function validate_age($field_value, &$field) {
+   if ($field_value > 110) {
+       $field['error'] = 'Per daug metų!';
+        return false;
+   }
+    
+    return true;
+}

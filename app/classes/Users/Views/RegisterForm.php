@@ -39,6 +39,15 @@ class RegisterForm extends \Core\Views\Form {
                         ]
                     ],
                 ],
+                'age' => [
+                    'label' => 'Age',
+                    'type' =>  'number' ,
+                    'extra' => [
+                        'validators' => [
+                            'validate_age'
+                        ]
+                    ]
+                ]
             ],
             'buttons' => [
                 'submit' => [
