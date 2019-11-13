@@ -9,6 +9,9 @@ class CreateForm extends BaseForm {
         
         $this->data['attr']['id'] = 'create-form';
         $this->data['buttons']['submit']['title'] = 'Sukurti';
+        //keiciame musu buttono stylius
+        $this->data['buttons']['submit']['extra']['attr']['class']= 'button-outline';
+        
     }
 
 }

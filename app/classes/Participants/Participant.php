@@ -15,6 +15,7 @@ class Participant {
                 'name' => null,
                 'surname' => null,
                 'city' => null,
+                'age' => null
             ];
         }
     }
@@ -24,6 +25,7 @@ class Participant {
      * @param $array
      */
     public function setData($array) {
+        
         if (isset($array['id'])) {
             $this->setId($array['id']);
         } else {
@@ -32,6 +34,7 @@ class Participant {
         $this->setName($array['name'] ?? null);
         $this->setSurname($array['surname'] ?? null);
         $this->setCity($array['city'] ?? null);
+        $this->setAge($array['age'] ?? null);
     }
 
     /**
@@ -44,6 +47,7 @@ class Participant {
             'name' => $this->getName(),
             'surname' => $this->getSurname(),
             'city' => $this->getCity(),
+            'age' => $this->getAge()
         ];
     }
 
@@ -105,6 +109,13 @@ class Participant {
      */
     public function getCity() {
         return $this->data['city'];
+    }
+    
+    public function setAge(){
+        return $this->data['age'];
+    }
+    public function getAge(){
+        return $this->data['age'];
     }
 
 }

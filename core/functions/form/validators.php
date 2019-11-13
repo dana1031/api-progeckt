@@ -1,9 +1,17 @@
 <?php
-
+function validate_number_range($field_input, &$field, $params) {
+    if ($field_input <$params['min'] || $field_input > $params['max']) {
+       $field['error'] = 'netinkamas amzius!';
+        return false;
+   
+}
+ return true;
+}
 function validate_fields_match($filtered_input, &$form, $params) {
     $match = true;
 
     foreach ($params as $field_id) {
+        var_dump($params);
         $ref_value = $ref_value ?? $filtered_input[$field_id];
         if ($ref_value != $filtered_input[$field_id]) {
             $match = false;
@@ -43,8 +51,8 @@ function validate_is_positive($field_value, &$field) {
     }
 }
 function validate_age($field_value, &$field) {
-   if ($field_value > 110) {
-       $field['error'] = 'Per daug metų!';
+   if (($field_value <19) || ($field_value > 110)) {
+       $field['error'] = 'netinkamas amzius!';
         return false;
    }
     

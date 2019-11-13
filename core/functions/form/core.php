@@ -43,6 +43,8 @@ function validate_form($filtered_input, &$form) {
             // We can make validator receive params, setting it as an array itself
             // in that case, validator id becomes its callback function
             if (is_array($validator)) {
+                var_dump($validator);
+                var_dump($field_value);
                 $is_valid = $validator_id($field_value, $field, $validator);
             } else {
                 $is_valid = $validator($field_value, $field);

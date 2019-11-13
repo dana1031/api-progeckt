@@ -11,7 +11,8 @@ class View {
     }
     
     /**
-     * This function returns data as a reference, 
+     * This function returns data as a 
+     * reference, 
      * so it is convenient to alter the data
      * outside the view
      * 
