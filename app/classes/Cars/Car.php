@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Participants;
 
-class Participant {
+namespace App\Cars;
+
+class Car {
+    const MANUFACTURERS = ['bmv' => 'BMW','audi' => 'Audi', 'fiat' => 'Fiat'];
 
     private $data = [];
 
@@ -12,13 +14,15 @@ class Participant {
         } else {
             $this->data = [
                 'id' => null,
-                'name' => null,
-                'surname' => null,
-                'city' => null,
+                'manufacturer' => null,
+                'model' => null,
+                'years' => null,
             ];
         }
     }
-
+   public static function getManufacturersOptions(){
+       return self::MANUFACTURERS;
+   }
     /**
      * * Sets all data from array
      * @param $array
@@ -30,9 +34,9 @@ class Participant {
         } else {
             $this->data['id'] = null;
         }
-        $this->setName($array['name'] ?? null);
-        $this->setSurname($array['surname'] ?? null);
-        $this->setCity($array['city'] ?? null);
+        $this->setmanufacturer($array['manufacturer'] ?? null);
+        $this->setModel($array['model'] ?? null);
+        $this->setYears($array['years'] ?? null);
 //        $this->setAge($array['age'] ?? null);
     }
 
@@ -43,9 +47,9 @@ class Participant {
     public function getData() {
         return [
             'id' => $this->getId(),
-            'name' => $this->getName(),
-            'surname' => $this->getSurname(),
-            'city' => $this->getCity(),
+            'manufacturer' => $this->getmanufacturer(),
+            'model' => $this->getModel(),
+            'years' => $this->getYears(),
 //            'age' => $this->getAge()
         ];
     }
@@ -68,46 +72,46 @@ class Participant {
      * Sets name
      * @param string $name
      */
-    public function setName(string $name) {
-        $this->data['name'] = $name;
+    public function setmanufacturer(string $manufacturer) {
+        $this->data['manufacturer'] = $manufacturer;
     }
 
     /**
      * Returns name
      * @return string
      */
-    public function getName() {
-        return $this->data['name'];
+    public function getmanufacturer() {
+        return $this->data['manufacturer'];
     }
 
     /**
      * Sets data surname
      * @param string $surname
      */
-    public function setSurname(string $surname) {
-        $this->data['surname'] = $surname;
+    public function setModel(string $model) {
+        $this->data['model'] = $model;
     }
 
     /**
      * @return mixed
      */
-    public function getSurname() {
-        return $this->data['surname'];
+    public function getModel() {
+        return $this->data['model'];
     }
 
     /**
      * Sets data city
      * @param string $city
      */
-    public function setCity(string $city) {
-        $this->data['city'] = $city;
+    public function setYears(string $years) {
+        $this->data['years'] = $years;
     }
 
     /**
      * @return mixed
      */
-    public function getCity() {
-        return $this->data['city'];
+    public function getyears() {
+        return $this->data['years'];
     }
     
 //    public function setAge(){
@@ -118,3 +122,5 @@ class Participant {
 //    }
 
 }
+
+

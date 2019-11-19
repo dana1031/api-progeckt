@@ -8,10 +8,8 @@ class Response {
     private $errors;
 
     public function __construct($data = []) {
-        if ($data) {
-            $this->setData($data['data'] ?? []);
-            $this->setErrors($data['errors'] ?? []);
-        }
+        $this->setData($data['data'] ?? []);
+        $this->setErrors($data['errors'] ?? []);
     }
 
     public function print() {

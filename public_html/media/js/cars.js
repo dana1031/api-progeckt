@@ -204,7 +204,7 @@ const forms = {
  */
 const table = {
     getElement: function () {
-        return document.querySelector('#person-table tbody');
+        return document.querySelector('#cars-table tbody');
     },
     init: function () {
         this.data.load();

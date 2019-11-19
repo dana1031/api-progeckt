@@ -1,4 +1,4 @@
 nbproject/
-data/*
+app/data/*
 vendor/
 !data/README

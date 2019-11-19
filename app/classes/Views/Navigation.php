@@ -15,7 +15,9 @@ class Navigation extends \Core\View {
             $user = App::$session->getUser();
             $label = $user->getEmail();
             $this->addLink('right', '/logout.php', "Logout($label)");
+            $this->addLink('right', '/about.php',"About");
         } else {
+            
             $this->addLink('right','https://google.lt', 'Win');
             $this->addLink('right', '/login.php', 'Prisijungti');
             $this->addLink('right', '/register.php', 'Registruotis');            
