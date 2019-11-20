@@ -110,11 +110,11 @@ class Participant {
         return $this->data['city'];
     }
     
-//    public function setAge(){
-//        return $this->data['age'];
-//    }
-//    public function getAge(){
-//        return $this->data['age'];
-//    }
+   public function setAge(){
+         $this->data['age']= $age;;
+    }
+   public function getAge(){
+        return $this->data['age'];
+    }
 
 }

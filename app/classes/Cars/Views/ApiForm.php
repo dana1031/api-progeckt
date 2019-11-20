@@ -24,10 +24,16 @@ class ApiForm extends \Core\Views\Form {
                 'years' => [
                     'extra' => [
                         'validators' => [
-                            'validate_not_empty'
+                            'validate_not_empty',
+//                            'validate_to_mach_simbol',
+                            'validate_number_range' => [
+                                'min' => 1900,
+                                'max' => 2019,
+                                'error' => 'neteisingai ivestas laukas'
+                            ]
                         ]
                     ]
-                ],
+                ]
             ],
             'callbacks' => [
                 'success' => 'form_success',

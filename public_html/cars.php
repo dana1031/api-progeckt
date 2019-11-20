@@ -41,20 +41,20 @@ $footer = new \App\Views\Footer();
         <main>
             <section class="wrapper">
                 <div class="block">
-                    <h1>Dalyvių Tvarkyklė:</h1>                    
+                    <h1>Manage cars:</h1>                    
                     <?php print $createForm->render(); ?>
                 </div>
                 <div class="block">
-                    <div id="cars-table">
+                    <div id="person-table">
                         <table>
                             <thead>
                                 <tr>
                                     <th>Nr.</th>
-                                    <th>Vardas</th>
-                                    <th>Pavardė</th>
-                                    <th>Miestas</th>
-                                    <th>Trinimas</th>
-                                    <th>Redagavimas</th>
+                                    <th>Name</th>
+                                    <th>Surname</th>
+                                    <th>City</th>
+                                    <th>Delete</th>
+                                    <th>Edit</th>
                                 </tr>
                             </thead>
                             <tbody>

@@ -41,7 +41,7 @@ var_dump($carModel->get());
         <main>
             <section class="wrapper">
                 <div class="block">
-                    <h1>Dalyvių Tvarkyklė:</h1>                    
+                    <h1>Manage participants:</h1>                    
                     <?php print $createForm->render(); ?>
                 </div>
                 <div class="block">
@@ -50,11 +50,11 @@ var_dump($carModel->get());
                             <thead>
                                 <tr>
                                     <th>Nr.</th>
-                                    <th>Vardas</th>
-                                    <th>Pavardė</th>
-                                    <th>Miestas</th>
-                                    <th>Trinimas</th>
-                                    <th>Redagavimas</th>
+                                    <th>Name</th>
+                                    <th>Surname</th>
+                                    <th>City</th>
+                                    <th>Delete</th>
+                                    <th>Edit</th>
                                 </tr>
                             </thead>
                             <tbody>

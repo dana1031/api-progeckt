@@ -24,7 +24,7 @@ $footer = new \App\Views\Footer;
         <link rel="stylesheet" href="media/css/milligram.min.css">
         <link rel="stylesheet" href="media/css/style.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <style>
+<!--        <style>
             header {
                 display: block;
                 width: 100%;
@@ -288,7 +288,7 @@ $footer = new \App\Views\Footer;
                 align-items: center;
                 justify-content: center;
             }
-        </style>
+        </style>-->
     </head>
     <body>
         <header>

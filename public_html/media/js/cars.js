@@ -1,12 +1,10 @@
 'use strict';
-
 const endpoints = {
     get: 'api/cars/get.php',
     create: 'api/cars/create.php',
     update: 'api/cars/update.php',
     delete: 'api/cars/delete.php'
 };
-
 /**
  * Executes API request
  * @param {type} url Endpoint URL
@@ -18,6 +16,7 @@ const endpoints = {
 function api(url, formData, success, fail) {
     fetch(url, {
         method: 'POST',
+        //form data yra duomenis kuriuos postinam
         body: formData
     }).then(response => response.json())
             .then(obj => {
@@ -32,7 +31,6 @@ function api(url, formData, success, fail) {
                 fail(['Could not connect to API!']);
             });
 }
-
 /**
  * Form array
  * Contains all form-related functionality
@@ -58,7 +56,6 @@ const forms = {
         },
         success: function (data) {
             const element = forms.create.getElement();
-
             table.row.append(data);
             forms.ui.errors.hide(element);
             forms.ui.clear(element);
@@ -75,10 +72,8 @@ const forms = {
         init: function () {
             console.log('Initializing update form...');
             this.elements.form().addEventListener('submit', this.onSubmitListener);
-
             const closeBtn = forms.update.elements.modal().querySelector('.close');
             closeBtn.addEventListener('click', forms.update.onCloseListener);
-
         },
         elements: {
             form: function () {
@@ -93,7 +88,6 @@ const forms = {
             let formData = new FormData(e.target);
             let id = forms.update.elements.form().getAttribute('data-id');
             formData.append('id', id);
-
             api(endpoints.update, formData, forms.update.success, forms.update.fail);
         },
         success: function (data) {
@@ -104,6 +98,7 @@ const forms = {
             forms.ui.errors.show(this.elements.form(), errors);
         },
         fill: function (data) {
+            forms.ui.clear(forms.update.elements.form());
             forms.ui.fill(forms.update.elements.form(), data);
         },
         onCloseListener: function (e) {
@@ -134,9 +129,17 @@ const forms = {
          */
         fill: function (form, data) {
             form.setAttribute('data-id', data.id);
-
             Object.keys(data).forEach(data_id => {
                 if (form[data_id]) {
+                    
+                    // Sukuriame papildoma funkcionaluma select'ui
+                    // Ieskome tokio option'o, kurio value atitiktų iš JSON'o gautą vertę
+                    const option = form.querySelector('option[value="' + data[data_id] + '"]');
+                    if (option) {
+                        // Jeigu toks option'as buvo rastas, jo parentui (pačiam select'ui)
+                        // nustatome vertę
+                        option.parentNode.value = data[data_id];
+                    }                  
                     const input = form.querySelector('input[name="' + data_id + '"]');
                     if (input) {
                         input.value = data[data_id];
@@ -145,7 +148,7 @@ const forms = {
             });
         },
         clear: function (form) {
-            var fields = form.querySelectorAll('[name]')
+            let fields = form.querySelectorAll('[name]')
             fields.forEach(field => {
                 field.value = '';
             });
@@ -153,7 +156,6 @@ const forms = {
         flash: {
             class: function (element, class_name) {
                 const prev = element.className;
-                
                 element.className += class_name;
                 setTimeout(function () {
                     element.className = prev;
@@ -179,7 +181,6 @@ const forms = {
                     span.className = 'field-error';
                     span.innerHTML = errors[error_id];
                     field.parentNode.append(span);
-
                     console.log('Form error in field: ' + error_id + ':' + errors[error_id]);
                 });
             },
@@ -191,24 +192,22 @@ const forms = {
                 const errors = form.querySelectorAll('.field-error');
                 if (errors) {
                     errors.forEach(node => {
-                        node.remove();                 
+                        node.remove();
                     });
                 }
             }
         }
     }
 };
-
 /**
  * Table-related functionality
  */
 const table = {
     getElement: function () {
-        return document.querySelector('#cars-table tbody');
+        return document.querySelector('#person-table tbody');
     },
     init: function () {
         this.data.load();
-
         Object.keys(this.buttons).forEach(buttonId => {
             table.buttons[buttonId].init();
         });
@@ -246,25 +245,22 @@ const table = {
         build: function (data) {
             const row = document.createElement('tr');
             row.setAttribute('data-id', data.id);
-
+//data bus objektas, o Object.keys(data)istraukia viska kaip masyva, o masyva galima foreachinti
             Object.keys(data).forEach(data_id => {
                 let td = document.createElement('td');
                 td.innerHTML = data[data_id];
                 row.append(td);
             });
-
             let buttons = {
                 delete: 'Ištrinti',
                 edit: 'Redaguoti'
             };
-
             Object.keys(buttons).forEach(button_id => {
                 let btn = document.createElement('td');
                 btn.innerHTML = buttons[button_id];
                 btn.className = button_id;
                 row.append(btn);
             });
-
             return row;
         },
         /**
@@ -306,9 +302,7 @@ const table = {
             onClickListener: function (e) {
                 if (e.target.className === 'delete') {
                     let formData = new FormData();
-
                     let tr = e.target.closest('tr');
-
                     formData.append('id', tr.getAttribute('data-id'));
                     api(endpoints.delete, formData, table.buttons.delete.success, table.buttons.delete.fail);
                 }
@@ -331,9 +325,7 @@ const table = {
             onClickListener: function (e) {
                 if (e.target.className === 'edit') {
                     let formData = new FormData();
-
                     let tr = e.target.closest('tr');
-
                     formData.append('row_id', tr.getAttribute('data-id'));
                     api(endpoints.get, formData, table.buttons.edit.success, table.buttons.edit.fail);
                 }
@@ -341,6 +333,7 @@ const table = {
             success: function (data) {
                 let person_data = data[0];
                 forms.update.show();
+                
                 forms.update.fill(person_data);
             },
             fail: function (errors) {
@@ -349,7 +342,6 @@ const table = {
         }
     }
 };
-
 /**
  * Core page functionality
  */
@@ -359,10 +351,8 @@ const app = {
         Object.keys(forms).forEach(formId => {
             forms[formId].init();
         });
-
         table.init();
     }
 };
-
 // Launch App
 app.init();

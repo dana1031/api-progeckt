@@ -72,7 +72,7 @@ class Car {
      * Sets name
      * @param string $name
      */
-    public function setmanufacturer(string $manufacturer) {
+    public function setmanufacturer(String $manufacturer) {
         $this->data['manufacturer'] = $manufacturer;
     }
 
@@ -88,7 +88,7 @@ class Car {
      * Sets data surname
      * @param string $surname
      */
-    public function setModel(string $model) {
+    public function setModel(String $model) {
         $this->data['model'] = $model;
     }
 
@@ -103,14 +103,14 @@ class Car {
      * Sets data city
      * @param string $city
      */
-    public function setYears(string $years) {
+    public function setYears(String $years) {
         $this->data['years'] = $years;
     }
 
     /**
      * @return mixed
      */
-    public function getyears() {
+    public function getYears() {
         return $this->data['years'];
     }
     
