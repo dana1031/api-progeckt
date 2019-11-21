@@ -13,7 +13,9 @@
                                 <?php print $field['label']; ?>
                             </span>
                         <?php endif; ?>
-
+                        <?php if ($field['optional'] ?? false):?>
+                            <span class="optional">optional</span>
+                        <?php endif; ?>        
                         <!--fields to be printed-->
                         <?php if (in_array($field['type'], ['hidden', 'text', 'password', 'email', 'number'])): ?>
                             <?php require 'elements/input.tpl.php'; ?>

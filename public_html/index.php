@@ -304,16 +304,15 @@ $footer = new \App\Views\Footer;
                         <!--                        <div class="column">-->
                         <div class="card">
                             <img class="img"
-                                 src="https://media0.giphy.com/media/8h943ofFHgJPy/source.gif"
-                                 alt="Nature">
-
+                          src="https://66.media.tumblr.com/tumblr_m5fk5vaKkc1rynkyko1_400.gifv"
+                           alt="Ocean">    
                             <!--                            </div>-->
                         </div>
                         <!--                       <div class="column">-->
                         <div class="card">
                             <img class="img"
-                                 src="https://i.pinimg.com/originals/42/45/42/424542f92a6fbc8359e925d2447acd06.gif"
-                                 alt="Nature">
+                                 src="http://www.olddominionwildlife.com/wp-content/uploads/doe_and_fawns.gif"
+                                 alt="nature">
 
 
                         </div>

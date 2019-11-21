@@ -17,14 +17,18 @@ class RegisterForm extends \Core\Views\Form {
                           'validate_alphabet_only'
             
                           ]
-              ]
-            ],      
+              ],
+                  'optional' => true
+            ], 
+              
+              
               'email' => [
                   'label' => 'Email',
                   'type' => 'email',
                   'extra' => [
                       'validators' => [
                           'validate_not_empty',
+                          'validate_email',
                           'validate_mail'
                       ]
                   ],

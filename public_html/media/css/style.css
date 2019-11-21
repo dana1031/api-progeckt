@@ -132,3 +132,7 @@ footer {
     align-items: center;
     justify-content: center;
 }
+.optional {
+    color: red;
+    font-size: 0.9rem;
+}
