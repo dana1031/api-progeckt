@@ -3,15 +3,6 @@ require '../bootloader.php';
 
 use App\App;
 
-//
-//$createForm = new \App\Participants\Views\CreateForm();
-//$updateForm = new \App\Participants\Views\UpdateForm();
-//$navigation = new \App\Views\Navigation();
-//$footer = new \App\Views\Footer();
-//
-//if (!App::$session->userLoggedIn()) {
-//    header('Location: /login.php');
-//}
 $navigation = new \App\Views\Navigation();
 $footer = new \App\Views\Footer;
 ?>
@@ -166,7 +157,7 @@ $footer = new \App\Views\Footer;
                 opacity: 1;
             }
 
-            /*            * Bendrinės klasės,
+            /*            * BendrinÄ—s klasÄ—s,
                         nustatymai *
                         html {
                             scroll-behavior: smooth;
@@ -251,7 +242,7 @@ $footer = new \App\Views\Footer;
 
 
             a[dropdown-target].nav-menu-link:after {
-                content: " ▼";
+                content: " â–¼";
                 font-size: 0.75em;
             }
 
@@ -289,72 +280,182 @@ $footer = new \App\Views\Footer;
                 justify-content: center;
             }
         </style>-->
+<!--        <style>
+           /* =============== HEADER =============== */
+
+header {
+    background-color: #f5f5f5;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 70px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .link-wrapper {
+    display: inline-block;
+    padding: 5px;
+}
+
+nav .link-wrapper.active {
+    border: 2px solid #21006d;
+    font-weight: bold;    
+}
+
+            section{
+
+               display:flex;
+                max-width: 100%;
+                height: 300px;
+                align-items: center;
+                 flex-direction: row;
+                 justify-content: space-between;
+            }
+
+
+            .row{
+                width: 960px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .card{display: flex;
+                  flex-direction: row;
+                backgraund-size: cover;
+                justify-content: space-between;
+               box-sizing: border-box;
+                width: 300px;
+                height:150px;
+                border:1px solid grey;
+                text-align: center;
+                margin: 10px
+            }
+            ***
+            .img{
+                 backgraund-size: cover;
+                box-sizing: border-box;
+                height: 100%;
+            }
+            footer{
+                height:50px;
+                background-color: green;
+            }
+                        main {
+                            background-image: url("https://images.pexels.com/photos/1250260/pexels-photo-1250260.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+                            background-size: cover;
+                        }
+            @media only screen and (max-width: 800px) {
+                header{
+                    
+                }
+                .row{
+                    flex-direction: column;
+                }
+                .card{
+                    max-width:100;
+                    margin: 10px;
+                }
+                section{
+                    
+                    max-width: 100%;
+                    height:600px;
+                }
+            }
+            body {
+                display: inline-block;
+                width: 100%;
+                margin: 0;
+                height: 100vh;
+                background: #ffb88c;  fallback for old browsers 
+                background-image: -webkit-linear-gradient(
+                    to right,
+                    #de6262,
+                    #ffb88c
+                    );  Chrome 10-25, Safari 5.1-6 
+                background-image: linear-gradient(
+                    to right,
+                    #de6262,
+                    #ffb88c
+                    );  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
+                background-size: cover;
+            }*/
+        </style>-->
     </head>
     <body>
         <header>
-<?php print $navigation->render(); ?>
+            <?php print $navigation->render(); ?>
         </header>
 
         <main>
-            <div class="container">
+        <div class="hero">
+           
+                <img
+                  class="hero-img"
+                  src="foto.jpg"
+                  alt="hero"
+                />
+            
+             </div
 
 
-                <section>
-                    <div class="row">
-                        <!--                        <div class="column">-->
+            <section>
+                <div class="row">
+<!--                    <div class="column">-->
                         <div class="card">
                             <img class="img"
-                          src="https://66.media.tumblr.com/tumblr_m5fk5vaKkc1rynkyko1_400.gifv"
-                           alt="Ocean">    
-                            <!--                            </div>-->
+                                 src="https://image.shutterstock.com/image-photo/assortment-fresh-fruits-vegetables-260nw-553662235.jpg" alt="Ocean"> 
+<!--                                 src="https://i.pinimg.com/originals/db/3b/63/db3b638a7d22a77f29cf6c7d1d1d6d2b.gif""-->
+                                    
                         </div>
-                        <!--                       <div class="column">-->
+<!--                    </div>-->
+<!--                    <div class="column">-->
                         <div class="card">
                             <img class="img"
-                                 src="http://www.olddominionwildlife.com/wp-content/uploads/doe_and_fawns.gif"
-                                 alt="nature">
+                                 src="https://image.freepik.com/foto-gratis/regar-planta-joven-que-crece-cascara-huevo-jardin_7186-11.jpg" alt="Ocean"> 
+<!--                                 src="https://i.pinimg.com/originals/db/3b/63/db3b638a7d22a77f29cf6c7d1d1d6d2b.gif"-->
+                               
+<!--                        </div>-->
 
 
-                        </div>
-                        <!--                        </div>-->
-                        <!--                        <div class="column">-->
-                        <div class="card">
-                            <img class="img"
-                                 src="https://i.pinimg.com/originals/db/3b/63/db3b638a7d22a77f29cf6c7d1d1d6d2b.gif"
-                                 alt="Nature">
-
-                        </div>
-                       
-   <!--                        <div class="column">-->
-                        <div class="card">
-                            <img class="img"
-                                 src="https://i.pinimg.com/originals/db/3b/63/db3b638a7d22a77f29cf6c7d1d1d6d2b.gif"
-                                 alt="Nature">
-
-                        </div>
-                       
-                                               
-                        </div>
-                </section>
-                <container>
-                    <div class="row">
-                        <div class="textas">
-                            <h1>Textas</h1>
-                            <p>textas textas textas Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim dolorum
-                                praesentium dignissimos eos eum, vitae blanditiis ipsa quasi explicabo sequi expedita porro
-                                nobis quam beatae facere, consequatur ex ab pariatur!</p>
-
-                        </div>
-
-                        <div class="textas">
-                            <h1>Textas</h1>
-                            <p>textas textas textas Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim dolorum
-                                praesentium dignissimos eos eum, vitae blanditiis ipsa quasi explicabo sequi expedita porro
-                                nobis quam beatae facere, consequatur ex ab pariatur!</p>
-                        </div>
                     </div>
-                    <!--                </container>-->
-            </div>
+<!--                    <div class="column">-->
+                        <div class="card">
+                            <img class="img"
+                                 src="https://image.shutterstock.com/image-photo/assortment-fresh-fruits-vegetables-260nw-553662235.jpg" alt="Ocean"> 
+<!--                                 src="https://i.pinimg.com/originals/db/3b/63/db3b638a7d22a77f29cf6c7d1d1d6d2b.gif"-->
+                                
+
+                        </div>   
+<!--                    </div>-->
+                </div>
+            </section>
+            <section>
+                <div class="row">
+                   <div class="text">
+                        <h1>Textas</h1>
+                        <p>textas textas textas Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim dolorum
+                            praesentium dignissimos eos eum, vitae blanditiis ipsa quasi explicabo sequi expedita porro
+                            nobis quam beatae facere, consequatur ex ab pariatur!</p>
+
+                    </div>
+
+                    <div class="text">
+                        <h1>Textas</h1>
+                        <p>textas textas textas Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim dolorum
+                            praesentium dignissimos eos eum, vitae blanditiis ipsa quasi explicabo sequi expedita porro
+                            nobis quam beatae facere, consequatur ex ab pariatur!</p>
+                    </div>
+                </div>
+
+            </section>
             <div class="map">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.2194261566747!2d25.33569661534373!3d54.723355078378496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd96e7d814e149%3A0xdd7887e198efd4c7!2sSaul%C4%97tekio%20al.%2015%2C%20Vilnius%2010221!5e0!3m2!1slt!2slt!4v1573639288714!5m2!1slt!2slt"
@@ -365,9 +466,9 @@ $footer = new \App\Views\Footer;
 
         <!-- Footer -->        
         <footer>
-<?php print $footer->render(); ?>
+            <?php print $footer->render(); ?>
         </footer>
 
-        <script defer src="media/js/app.js"></script>
+                    
     </body>
 </html>

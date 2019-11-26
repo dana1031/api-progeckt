@@ -7,10 +7,10 @@ $createForm = new \App\Cars\Views\CreateForm();
 $updateForm = new \App\Cars\Views\UpdateForm();
 $navigation = new \App\Views\Navigation();
 $footer = new \App\Views\Footer();
-//
-//if (!App::$session->userLoggedIn()) {
-//    header('Location: /login.php');
-//}
+
+if (!App::$session->userLoggedIn()) {
+    header('Location: /login.php');  //**************
+}
 //
 //$car = new Car([
 //    'manufacturer' => 'BMW',
@@ -49,12 +49,11 @@ $footer = new \App\Views\Footer();
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Nr.</th>
-                                    <th>Name</th>
-                                    <th>Surname</th>
-                                    <th>City</th>
-                                    <th>Delete</th>
-                                    <th>Edit</th>
+                                    <th>Vartotojo ID</th>
+                                    <th>Komentaro data</th>
+                                    <th>komentaro textas</th>
+                                    <th>Trinti</th>
+                                    <th>Redaguotit</th>
                                 </tr>
                             </thead>
                             <tbody>

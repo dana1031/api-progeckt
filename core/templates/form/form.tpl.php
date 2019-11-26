@@ -13,11 +13,12 @@
                                 <?php print $field['label']; ?>
                             </span>
                         <?php endif; ?>
-                        <?php if ($field['optional'] ?? false):?>
+                            
+                        <?php if (($field['optional']) ?? false): ?>
                             <span class="optional">optional</span>
                         <?php endif; ?>        
                         <!--fields to be printed-->
-                        <?php if (in_array($field['type'], ['hidden', 'text', 'password', 'email', 'number'])): ?>
+                        <?php if (in_array($field['type'], ['hidden', 'text', 'password', 'email', 'number', 'date', 'textarea'])): ?>
                             <?php require 'elements/input.tpl.php'; ?>
                         <?php elseif ($field['type'] === 'select'): ?>
                             <?php require 'elements/select.tpl.php'; ?>
@@ -43,7 +44,7 @@
                     <?php print $data['message']; ?>
                 </div>
             <?php endif; ?>
-            
+
             <?php if (isset($data['buttons']) && !empty($data['buttons'])): ?>
                 <div class="button-wrapper">
 

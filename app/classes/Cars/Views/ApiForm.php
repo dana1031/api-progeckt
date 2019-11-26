@@ -7,7 +7,7 @@ class ApiForm extends \Core\Views\Form {
     public function __construct($data = []) {
         $this->data = [
             'fields' => [
-                'manufacturer' => [
+                'manufactuter' => [
                     'extra' => [
                         'validators' => [
                             'validate_not_empty'
@@ -21,18 +21,14 @@ class ApiForm extends \Core\Views\Form {
                         ]
                     ]
                 ],
-                'years' => [
+                'year' => [
                     'extra' => [
                         'validators' => [
-                            'validate_not_empty',
-//                            'validate_to_mach_simbol',
-                            'validate_number_range' => [
-                                'min' => 1900,
-                                'max' => 2019,
-                                'error' => 'neteisingai ivestas laukas'
-                            ]
+                           'validate_not_empty'
                         ]
                     ]
+                    
+                    
                 ]
             ],
             'callbacks' => [

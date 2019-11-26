@@ -9,20 +9,32 @@ class Navigation extends \Core\View {
     public function __construct($data = []) {
         parent::__construct($data);
 
-        $this->addLink('left', '/', 'Home');
+        $this->addLink('left', '/', 'Titulinis');
+//        $this-> addLink('left', '/', 'Atsiliepimai');
+        
+//          
+//        $this-> addLink('left', '/', [
+//            'icon' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHinDz1O-rc5ean5zzoBz2e-zrfuc1y8tbHVnXwUoS7N1jgqQXMA&s',
+//             'alt' => 'company logo'
+//            ]);
+//        
+        
         
         if (App::$session->userLoggedIn()) {
             $user = App::$session->getUser();
 //            $label = $user->getEmail();
             $label = $user->getName();
-            $this->addLink('right', '/logout.php', "Logout($label)");
-            $this->addLink('right', '/about.php',"About");
-            $this->addlink('right', '/cars.php', "Cars");
-        } else {
+ //           $this-> addlink('left', '/logout', "flowers");
+            $this->addLink('right', '/logout.php', "Atsijungti($label)");
+//            $this->addLink('right', '/about.php',"About");
+            $this->addlink('right', '/cars.php', "Atsiliepimai");
             
-            $this->addLink('right','https://google.lt', 'Win');
+        } else {
+          
+            $this->addLink('right','/cars.php', 'Atsiliepimai');
+            $this->addLink('right', '/register.php', 'Registracija');
             $this->addLink('right', '/login.php', 'Prisijungti');
-            $this->addLink('right', '/register.php', 'Registruotis');            
+                       
         }
     }
 

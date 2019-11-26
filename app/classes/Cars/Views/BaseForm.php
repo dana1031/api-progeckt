@@ -8,22 +8,27 @@ class BaseForm extends \Core\Views\Form {
         $this->data = [
             'fields' => [
                 'manufacturer' => [
-                    'label' => 'manufacturer',
-                    'type' => 'select',
-                    'options' => \App\Cars\Car::getManufacturersOptions()
+                    'label' => 'Vardas',
+                    'type' => 'text',                  
                 ],
                 'model' => [
-                    'label' => 'Model',
-                    'type' => 'text',
+                    'label' => 'komentarai',
+                    'type' => 'textarea',
+//                    'extra' => [
+//                        'attr' => [
+//                            'placeholder' => 'komentaras'
+//                        ]
+//                    ]
                 ],
-                'years' => [
-                    'label' => 'Years',
-                    'type' => 'number',
+                'year' => [
+                    'label' => 'Data',
+                    'type' => 'date',
+                    
                 ],
             ],
             'buttons' => [
                 'submit' => [
-                    'title' => 'Submit',
+                    'title' => 'Siūsti',
                 ],
             ]
         ];

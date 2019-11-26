@@ -7,21 +7,10 @@ $createForm = new \App\Participants\Views\CreateForm();
 $updateForm = new \App\Participants\Views\UpdateForm();
 $navigation = new \App\Views\Navigation();
 $footer = new \App\Views\Footer();
-//
-//if (!App::$session->userLoggedIn()) {
-//    header('Location: /login.php');
-//}
-//
-//$car = new Car([
-//    'manufacturer' => 'BMW',
-//    'model' => '3',
-//    'years' => 2000
-//   
-//]);
-//var_dump($car);
+
 $carModel = new Model();
 //var_dump($carModel->insert($car));
-var_dump($carModel->get());
+//var_dump($carModel->get());
 ?>
 <html>
     <head>

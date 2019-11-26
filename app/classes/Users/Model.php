@@ -11,6 +11,7 @@ class Model
     private $table_name = 'users';
 
     public function __construct()
+            
     {
         App::$db->createTable($this->table_name);
     }

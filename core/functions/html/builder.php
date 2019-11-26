@@ -16,4 +16,4 @@ function html_attr($attributes) {
     }
 
     return implode(' ', $html_attr_arr);
-}
+} //objediniaet elementy massiva v stroku

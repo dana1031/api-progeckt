@@ -8,6 +8,13 @@ function validate_number_range($field_input, &$field, $params) {
     return true;
 }
 
+function validate_number_char($field_input, &$field, $params) {
+    if ($field_input < $params['min'] || $field_input > $params['max']) {
+        $field['error'] = 'Turi būti mažiau negu 40 simbolių!';
+        return false;
+    }
+    return true;
+}
 //function validate_to_mach_simbol($field_value, &$Form, $params) {
 //    var_dump($field_value);
 //    if (strlen($field_value)<8) {
