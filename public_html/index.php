@@ -395,67 +395,67 @@ nav .link-wrapper.active {
         </header>
 
         <main>
-        <div class="hero">
-           
-                <img
-                  class="hero-img"
-                  src="foto.jpg"
-                  alt="hero"
-                />
-            
-             </div
+ 
+  <section>
+                <div class="container hero-content "> 
+                    <div id="hero">
 
-
-            <section>
+<!--                       <img class="img" src="https://ctl.s6img.com/society6/img/dxRjxbThdzGHObpoQYN3iJaC770/w_1500/prints/~artwork/s6-original-art-uploads/society6/uploads/misc/4a931bec8fb04edfbe319aa23a55c027/~~/nyc-taxi711289-prints.jpg
+              " alt="">-->
+                        <h2 class="taxi">TAXI 24/7</h2>
+                    </div>
+                </div>
                 <div class="row">
-<!--                    <div class="column">-->
+                    <div class="column">
                         <div class="card">
-                            <img class="img"
-                                 src="https://image.shutterstock.com/image-photo/assortment-fresh-fruits-vegetables-260nw-553662235.jpg" alt="Ocean"> 
-<!--                                 src="https://i.pinimg.com/originals/db/3b/63/db3b638a7d22a77f29cf6c7d1d1d6d2b.gif""-->
-                                    
+                            <img class="img" src="https://edelswiss-limousine.ch/wp-content/uploads/2019/02/chauffeur-service-switzerland-1.png
+                                 " alt="">
+                            <div class="text">
+
+                                <h3>Taxi per 5 minutes</h3>
+                                <p>Automobilis mieste atvyksta per 5 minutes. Jūsų užsakymas nukreipiamas tiesiogiai 
+                                    vairuotojui. Taip sutaupomas užsakymo apdorojimo laikas.Patys galite pasirinkti 
+                                    Jums tinkantį automobilį, iš anksto pamatyti kelionės kainą.</p>
+                            </div>
                         </div>
-<!--                    </div>-->
-<!--                    <div class="column">-->
-                        <div class="card">
-                            <img class="img"
-                                 src="https://image.freepik.com/foto-gratis/regar-planta-joven-que-crece-cascara-huevo-jardin_7186-11.jpg" alt="Ocean"> 
-<!--                                 src="https://i.pinimg.com/originals/db/3b/63/db3b638a7d22a77f29cf6c7d1d1d6d2b.gif"-->
-                               
-<!--                        </div>-->
-
-
                     </div>
-<!--                    <div class="column">-->
+                    <div class="column">
                         <div class="card">
-                            <img class="img"
-                                 src="https://image.shutterstock.com/image-photo/assortment-fresh-fruits-vegetables-260nw-553662235.jpg" alt="Ocean"> 
-<!--                                 src="https://i.pinimg.com/originals/db/3b/63/db3b638a7d22a77f29cf6c7d1d1d6d2b.gif"-->
-                                
+                            <img class="img" src="https://edelswiss-limousine.ch/wp-content/uploads/2019/02/chauffeur-service-switzerland-1.png
+                                 " alt="">
+                            <div class="text">
 
-                        </div>   
-<!--                    </div>-->
+                                <h3>Automobilis šeimai</h3>
+                                <p>Siūlome Jums techniškai tvarkingus ir prižiūrėtus automobilius, nemokamas 
+                                    vaikiškas kėdutes ir GPS navigacijas. Už papildomą simbolinį mokestį suteiksime 
+                                    stogo bagažinę. Užtikrinsime nemokamą automobilių pristatymą Vilniaus mieste.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <img class="img" src="https://edelswiss-limousine.ch/wp-content/uploads/2019/02/chauffeur-service-switzerland-1.png
+                                 " alt="">
+                            <div class="text">
+
+                                <h3>Asmeninio vairuotojo paslauga</h3>
+                                <p>Jeigu planuojate kelionę ar tiesiog žinote kada Jums 
+                                    reikės vairuotojo paslaugos, galite užsakyti mūsų paslaugą 
+                                    iš anksto. Tokiu atveju galėsite pamiršti rūpestį kaip nuvykti 
+                                    į reikiamą vietą laiku.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <section>
-                <div class="row">
-                   <div class="text">
-                        <h1>Textas</h1>
-                        <p>textas textas textas Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim dolorum
-                            praesentium dignissimos eos eum, vitae blanditiis ipsa quasi explicabo sequi expedita porro
-                            nobis quam beatae facere, consequatur ex ab pariatur!</p>
 
-                    </div>
 
-                    <div class="text">
-                        <h1>Textas</h1>
-                        <p>textas textas textas Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim dolorum
-                            praesentium dignissimos eos eum, vitae blanditiis ipsa quasi explicabo sequi expedita porro
-                            nobis quam beatae facere, consequatur ex ab pariatur!</p>
-                    </div>
-                </div>
+           
+       
 
-            </section>
+
+           
+            
             <div class="map">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.2194261566747!2d25.33569661534373!3d54.723355078378496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd96e7d814e149%3A0xdd7887e198efd4c7!2sSaul%C4%97tekio%20al.%2015%2C%20Vilnius%2010221!5e0!3m2!1slt!2slt!4v1573639288714!5m2!1slt!2slt"

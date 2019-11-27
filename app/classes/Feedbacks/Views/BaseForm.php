@@ -1,37 +1,28 @@
 <?php
-
-namespace App\Cars\Views;
-
+namespace App\Feedbacks\Views;
 class BaseForm extends \Core\Views\Form {
-
     public function __construct($data = []) {
         $this->data = [
             'fields' => [
-                'manufacturer' => [
+                'vardas' => [
                     'label' => 'Vardas',
-                    'type' => 'text',                  
+                    'type' => 'text',
                 ],
-                'model' => [
-                    'label' => 'komentarai',
+                'komentaras' => [
+                    'label' => 'Komentaras',
                     'type' => 'textarea',
-//                    'extra' => [
-//                        'attr' => [
-//                            'placeholder' => 'komentaras'
-//                        ]
-//                    ]
+                   
                 ],
-                'year' => [
+                'diena' => [
                     'label' => 'Data',
                     'type' => 'date',
-                    
                 ],
             ],
             'buttons' => [
                 'submit' => [
-                    'title' => 'Siūsti',
+                    'title' => 'Siųsti',
                 ],
             ]
         ];
     }
-
 }

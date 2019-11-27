@@ -1,1 +1,1 @@
-<span>&copy; <?php print date('Y') ?>. <?php print $data['created_by']; ?>, Visos teisės saugomos</span
+<span>&copy; <?php print date('Y') ?>. <?php print $data['created_by']; ?>, visos teisės saugomos.</span>

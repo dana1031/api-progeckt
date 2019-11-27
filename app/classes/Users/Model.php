@@ -4,33 +4,31 @@ namespace App\Users;
 
 use \App\App;
 
-
 class Model
 {
 
-    private $table_name = 'users';
-
+    private $table_name = 'feedbacks';  //*************
     public function __construct()
             
     {
         App::$db->createTable($this->table_name);
     }
 
-    /** 2uzd turi irasyti $drink i duombaze
-     * @param Drink $drink
+    /**  turi irasyti  i duombaze
+     * @param User $user
      */
     public function insert(User $user) {
         return App::$db->insertRow($this->table_name, $user->getData());
     }
 
     /**
-     * 3uzd
+     * 
      * @param array $conditions
      * @return User[]
      */
     public function get($conditions = []) {
-        $users = [];
         
+        $users = [];
         $rows = App::$db->getRowsWhere($this->table_name, $conditions);
         foreach ($rows as $row_id => $row) {
             $row['id'] = $row_id;
@@ -41,8 +39,8 @@ class Model
     }
 
     /**
-     * 4uzd
-     * @param Drink $drink
+     * 
+     * @param User $user
      * @return bool
      */
     public function update(User $user)
@@ -51,8 +49,8 @@ class Model
     }
 
     /**
-     * 5uzd istrinti table
-     * @param Drink $drink
+     *  istrinti table
+     * @param User $user
      * @return bool
      */
     public function delete(User $user)

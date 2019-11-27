@@ -13,7 +13,7 @@ function form_success($filtered_input, &$form) {
             $filtered_input['email'],
             $filtered_input['password']
     );
-    header('Location: ' . '/cars.php');   //**************
+    header('Location: ' . '/feedbacks.php');   //**************
 }
 
 switch (get_form_action()) {

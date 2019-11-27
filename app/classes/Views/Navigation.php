@@ -22,16 +22,13 @@ class Navigation extends \Core\View {
         
         if (App::$session->userLoggedIn()) {
             $user = App::$session->getUser();
-//            $label = $user->getEmail();
             $label = $user->getName();
- //           $this-> addlink('left', '/logout', "flowers");
             $this->addLink('right', '/logout.php', "Atsijungti($label)");
-//            $this->addLink('right', '/about.php',"About");
-            $this->addlink('right', '/cars.php', "Atsiliepimai");
+            $this->addlink('right', '/Feedbacks.php', "Atsiliepimai");
             
         } else {
           
-            $this->addLink('right','/cars.php', 'Atsiliepimai');
+            $this->addLink('right','/Feedbacks.php', 'Atsiliepimai');
             $this->addLink('right', '/register.php', 'Registracija');
             $this->addLink('right', '/login.php', 'Prisijungti');
                        

@@ -1,9 +1,9 @@
 'use strict';
 const endpoints = {
-    get: 'api/cars/get.php',
-    create: 'api/cars/create.php',
+    get: 'api/Feedbacks/get.php',
+    create: 'api/Feedbacks/create.php',
     update: 'api/cars/update.php',
-    delete: 'api/cars/delete.php'
+    delete: 'api/Feedbacks/delete.php'
 };
 /**
  * Executes API request

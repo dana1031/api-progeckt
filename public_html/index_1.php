@@ -1,163 +1,112 @@
 <?php
 require '../bootloader.php';
-
 use App\App;
-
-//
-//$createForm = new \App\Participants\Views\CreateForm();
-//$updateForm = new \App\Participants\Views\UpdateForm();
-//$navigation = new \App\Views\Navigation();
-//$footer = new \App\Views\Footer();
-//
-//if (!App::$session->userLoggedIn()) {
-//    header('Location: /login.php');
-//}
 $navigation = new \App\Views\Navigation();
-$footer = new \App\Views\Footer;
+$footer = new \App\Views\Footer();
 ?>
-
+<html>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login</title>
+        <title>Taxi</title>
         <link rel="stylesheet" href="media/css/normalize.css">
         <link rel="stylesheet" href="media/css/milligram.min.css">
         <link rel="stylesheet" href="media/css/style.css">
+        <!--        <link rel="stylesheet" href="media/css/mano.css">-->
+
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <style>
-           header{
-               height:50px;
-               background-color: blue;
-           }
-           section{
+    </head>
 
-               max-width: 100%;
-              height: 600px;
-               align-items: center;
-               background-color: green;
-           .row{
-               width: 100%;
-               display: flex;
-               flex-direction: row;
-               flex-wrap: wrap;
-/*               justify-content:space-around;*/
-               justify-content:space-beetween; 
-               align-items: center;
-           }
-           .card{ 
-               
-               align-content:center; 
-              /**/width: 300px; 
-               height:250px;
-               border:1px solid grey;
-               text-align: center;
-               margin:10px;
-           }
-           /*****/
-           img{
-               height: 50%;
-           }
-           footer{
-               
-               background-color: green;
-           }
-           @media only screen and (max-width: 768px) {
-               .row{
-                   flex-direction: column;
-               }
-               .card{
-                   max-width:100;
-                   margin: 10px;
-               }
-               section{
-                   max-width: 100%;
-                   height:600px;
-               }
-           }
-       </style>
-       
-       </head>
-       
-       <body>
-    <header>
-        <?php print $navigation->render(); ?>
-    </header>
-    <main>
-        <div class="container">
+    <body>
+        <header>
+            <?php print $navigation->render(); ?>
+        </header>
 
+        <main>
 
             <section>
-                <div class="row">
-<!--                    <div class="column">-->
-                        <div class="card">
-                            <img class="img"
-                                 src="https://66.media.tumblr.com/tumblr_m5fk5vaKkc1rynkyko1_400.gifv"
-                                 alt="Ocean">    
-                        </div>
-<!--                    </div>
-                    <div class="column">-->
-                        <div class="card">
-                            <img class="img"
-                                 src="http://www.olddominionwildlife.com/wp-content/uploads/doe_and_fawns.gif"
-                                 alt="nature">
+                <div class="container hero-content "> 
+                    <div id="hero">
 
-
-                        </div>
-<!--                    </div>
-                   <div class="column">
-                        <div class="card">
-                            <img class="img"
-                                 src="https://i.pinimg.com/originals/db/3b/63/db3b638a7d22a77f29cf6c7d1d1d6d2b.gif"
-                                 alt="Nature">
-
-                        </div>
-                  </div>
-                        <div class="column">-->
-                            <div class="card">
-                                <img class="img"
-                                     src="https://i.pinimg.com/originals/db/3b/63/db3b638a7d22a77f29cf6c7d1d1d6d2b.gif"
-                                     alt="Nature">
-
-
-
-
-                        </div>     
-                </div
-                </section>
-                </div>     
-
-            <container>
-                <div class="row">
-                    <div class="textas">
-                        <h1>Textas</h1>
-                        <p>textas textas textas Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim dolorum
-                            praesentium dignissimos eos eum, vitae blanditiis ipsa quasi explicabo sequi expedita porro
-                            nobis quam beatae facere, consequatur ex ab pariatur!</p>
-
-                    </div>
-
-                    <div class="textas">
-                        <h1>Textas</h1>
-                        <p>textas textas textas Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim dolorum
-                            praesentium dignissimos eos eum, vitae blanditiis ipsa quasi explicabo sequi expedita porro
-                            nobis quam beatae facere, consequatur ex ab pariatur!</p>
+<!--                       <img class="img" src="https://ctl.s6img.com/society6/img/dxRjxbThdzGHObpoQYN3iJaC770/w_1500/prints/~artwork/s6-original-art-uploads/society6/uploads/misc/4a931bec8fb04edfbe319aa23a55c027/~~/nyc-taxi711289-prints.jpg
+              " alt="">-->
+                        <h2 class="taxi">TAXI 24/7</h2>
                     </div>
                 </div>
-            </container>
-        </div>
-        <div class="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.2194261566747!2d25.33569661534373!3d54.723355078378496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd96e7d814e149%3A0xdd7887e198efd4c7!2sSaul%C4%97tekio%20al.%2015%2C%20Vilnius%2010221!5e0!3m2!1slt!2slt!4v1573639288714!5m2!1slt!2slt"
-                width=100% height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                <div class="row">
+                    <div class="column">
+                        <div class="card">
+                            <img class="img" src="https://edelswiss-limousine.ch/wp-content/uploads/2019/02/chauffeur-service-switzerland-1.png
+                                 " alt="">
+                            <div class="text">
 
-        </div>
-    </main>
+                                <h3>Taxi per 5 minutes</h3>
+                                <p>Automobilis mieste atvyksta per 5 minutes. Jūsų užsakymas nukreipiamas tiesiogiai 
+                                    vairuotojui. Taip sutaupomas užsakymo apdorojimo laikas.Patys galite pasirinkti 
+                                    Jums tinkantį automobilį, iš anksto pamatyti kelionės kainą.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <img class="img" src="https://edelswiss-limousine.ch/wp-content/uploads/2019/02/chauffeur-service-switzerland-1.png
+                                 " alt="">
+                            <div class="text">
 
-    <!-- Footer -->        
-    <footer>
-        <?php print $footer->render(); ?>
-    </footer>
+                                <h3>Automobilis šeimai</h3>
+                                <p>Siūlome Jums techniškai tvarkingus ir prižiūrėtus automobilius, nemokamas 
+                                    vaikiškas kėdutes ir GPS navigacijas. Už papildomą simbolinį mokestį suteiksime 
+                                    stogo bagažinę. Užtikrinsime nemokamą automobilių pristatymą Vilniaus mieste.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <img class="img" src="https://edelswiss-limousine.ch/wp-content/uploads/2019/02/chauffeur-service-switzerland-1.png
+                                 " alt="">
+                            <div class="text">
 
-    <script defer src="media/js/app.js"></script>
-</body>
+                                <h3>Asmeninio vairuotojo paslauga</h3>
+                                <p>Jeigu planuojate kelionę ar tiesiog žinote kada Jums 
+                                    reikės vairuotojo paslaugos, galite užsakyti mūsų paslaugą 
+                                    iš anksto. Tokiu atveju galėsite pamiršti rūpestį kaip nuvykti 
+                                    į reikiamą vietą laiku.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+<!--            <section>
+                <div class="row">
+                    <div class="text">
+                        <h1>Paslauga</h1>
+                        <p>Paslaugos aprašymas Paslaugos aprašymas Paslaugos aprašymas</p>
+                    </div>
+                    <div class="text">
+                        <h1>Paslauga</h1>
+                        <p>Paslaugos aprašymas Paslaugos aprašymas Paslaugos aprašymas</p>
+                    </div>
+                    <div class="text">
+                        <h1>Paslauga</h1>
+                        <p>Paslaugos aprašymas Paslaugos aprašymas Paslaugos aprašymas</p>
+                    </div>
+                </div>
+            </section>-->
+            <!-- Map -->
+
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2304.219602278376!2d25.33569661589081!3d54.72335198029069!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd96e7d814e149%3A0xdd7887e198efd4c7!2sSaul%C4%97tekio%20al.%2015%2C%20Vilnius%2010221!5e0!3m2!1slt!2slt!4v1573638532307!5m2!1slt!2slt" width="100%" height="300px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+
+            <!-- Footer -->        
+            <footer>
+                <?php print $footer->render(); ?>
+            </footer>
+
+
+
+    </body>
 </html>

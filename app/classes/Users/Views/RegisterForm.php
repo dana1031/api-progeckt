@@ -63,10 +63,10 @@ class RegisterForm extends \Core\Views\Form {
                 ],
                 'password_repeat' => [
                     'label' => 'Pakartokite slaptažodį *',
-                    'type' => 'password',
+                   'type' => 'password',
                     'extra' => [
                         'validators' => [
-                            'validate_not_empty'
+                           'validate_not_empty'
                         ]
                     ],
                 ],

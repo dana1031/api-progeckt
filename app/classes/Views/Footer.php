@@ -7,7 +7,7 @@ use App\App;
 class Footer extends \Core\View {
     public function __construct($data = []){
         parent::__construct($data);
-        $this->data = ['created_by' => 'Danuta Kucerenko'];
+        $this->data = ['created_by' => 'Danuta Kučerenko'];
     }
 
     public function render($template_path = ROOT . '/app/templates/footer.tpl.php') {
