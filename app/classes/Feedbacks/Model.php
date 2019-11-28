@@ -1,14 +1,14 @@
 <?php
-namespace App\Feedbackss;
+namespace App\Feedbacks;
 use \App\App;
 class Model {
-    private $table_name = 'feedbacks';
+    private $table_name = 'feedback';
     public function __construct() {
         App::$db->createTable($this->table_name);
     }
     /**
-     * Irašo $car i duombaze
-     * @param Car $car
+     * Irašo $feedback i duombaze
+     * @param feedback $feedback
      * @return bool
      */
     public function insert(Feedback $feedback) {
@@ -19,14 +19,14 @@ class Model {
      * @return array
      */
     public function get($conditions = []) {
-        $cars = [];
+        $feedbacks = [];
         $rows = App::$db->getRowsWhere($this->table_name, $conditions);
         foreach ($rows as $row_id => $row_data) {
             $row_data['id'] = $row_id;
             $feedbacks[] = new Feedback($row_data);
         }
         
-        return $cars;
+        return $feedback;
     }
     /**
      * @param Cars $car

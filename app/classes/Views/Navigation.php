@@ -24,11 +24,11 @@ class Navigation extends \Core\View {
             $user = App::$session->getUser();
             $label = $user->getName();
             $this->addLink('right', '/logout.php', "Atsijungti($label)");
-            $this->addlink('right', '/Feedbacks.php', "Atsiliepimai");
+            $this->addlink('right', '/feedbacks.php', "Atsiliepimai");
             
         } else {
           
-            $this->addLink('right','/Feedbacks.php', 'Atsiliepimai');
+            $this->addLink('right','/feedbacks.php', 'Atsiliepimai');
             $this->addLink('right', '/register.php', 'Registracija');
             $this->addLink('right', '/login.php', 'Prisijungti');
                        

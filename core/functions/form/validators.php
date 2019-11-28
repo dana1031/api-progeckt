@@ -7,6 +7,15 @@ function validate_number_range($field_input, &$field, $params) {
     }
     return true;
 }
+function validate_field_length($field_value, &$field)
+{
+    if (strlen($field_value) > 40 || $field_value === null) {
+        $field['error'] = 'Laukelis viršija 40 simbolių kiekį';
+        return false;
+    } else {
+        return true;
+    }
+}
 
 function validate_number_char($field_input, &$field, $params) {
     if ($field_input < $params['min'] || $field_input > $params['max']) {

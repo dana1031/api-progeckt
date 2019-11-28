@@ -2,7 +2,7 @@
 const endpoints = {
     get: 'api/Feedbacks/get.php',
     create: 'api/Feedbacks/create.php',
-    update: 'api/cars/update.php',
+    update: 'api/Feedbacks/update.php',
     delete: 'api/Feedbacks/delete.php'
 };
 /**

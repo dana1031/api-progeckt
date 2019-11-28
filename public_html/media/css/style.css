@@ -8,6 +8,15 @@ header {
     justify-content: center;
     align-items: center;    
     height: 70px;
+/*    background-image: linear-gradient(
+    to right top,
+    #1f1f3b,
+    #36b971,
+    #6bc521,
+    #134113,
+    #a4c725
+  ); */
+    
 }
 
 nav {
@@ -132,6 +141,14 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: linear-gradient(
+    to right top,
+    #1f1f3b,
+    #36b971,
+    #6bc521,
+    #134113,
+    #a4c725
+  );
 }
 .optional {
     color: red;
@@ -139,13 +156,14 @@ footer {
 }
 
 /* =============== HERO =============== */
-#hero {
+.hero {
+   
     display: flex;
-    background-image: url('media/css/img/foto.jpg');
+    width: 100%;
+    background-image: url('media/css/img/taxigif.gif');
     background-position: center;
     background-size: cover;
- 
- height: 300px; 
+    height: 300px; 
    
 }
  
@@ -169,12 +187,114 @@ footer {
   text-align: center;
   padding: 0px;
 }
+
+    
 .map{
-    hieght: 300px;
+    height: 300px;
+}
+
+
+.container{
+    
+    whidth: 100%;
+}
+
+.row{
+/*    display:flex;*/
+    width-max: 800px;
+    height: 400px;
+    flex-direction: row;
+    }
+body {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  height: 100vh;
+/*  background: #ffb88c;  fallback for old browsers 
+  background-image: -webkit-linear-gradient(
+    to right,
+    #de6262,
+    #ffb88c
+  );  Chrome 10-25, Safari 5.1-6 
+  background-image: linear-gradient(
+    to right,
+    #de6262,
+    #ffb88c
+  );  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
+  background-size: cover;*/
+}
+.optional {
+    color: red;
+    font-size: 0.8rem;
+}
+.card{
+    height: 40%;
+    text-align: center;
+/*    border: 1px solid grey;*/
+}
+.row{
+    display:flex;
+    whidth-max: 800px;
+    height: 400px;
+    
+}
+#hero {
+    display: flex;
+    background-image: url('../hero1.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 300px; 
+
+}
+
+
+.hero-content {
+    /*  width: 100%; */
+    position: relative;
+    top: -60px;
+    left: 0px;
+    /*  background: rgba(255, 255, 255, 0.24);*/
+    text-align: center;
+    padding: 0px;
+}
+
+.taxi {
+    width: 50%; 
+    height: 80px; 
+
+    position: relative;
+    top: 100px;
+    left: 150px;
+    /*  background: rgba(255, 255, 255, 0.24);*/
+    text-align: center;
+    padding: 0px;
+}
+
+.column {
+    border: solid .5px;
+    margin: 20px 20px 20px 20px;
+}
+.h3 {
+    margin-top: 10px;
+}
+
+.map {
+    margin-top: 10px;
+    height: 300px; 
 }
 @media (max-width: 411px) {
     #hero {
- height: 150px; 
-   
+        height: 150px; 
+
+    }
+    .taxi {
+        position: relative;
+
+        left: -60px;
+    }
+}
+@media (max-width: 400px) {
+    .hero {
+ height: 150px;   
 }
 }

@@ -5,6 +5,7 @@ $createForm = new \App\Feedbacks\Views\CreateForm();
 $updateForm = new \App\Feedbacks\Views\UpdateForm();
 $navigation = new \App\Views\Navigation();
 $footer = new \App\Views\Footer();
+
 if (!App::$session->userLoggedIn()) {
     header('Location: /login.php');
 }
@@ -76,8 +77,8 @@ if (!App::$session->userLoggedIn()) {
                     <?php print $footer->render(); ?>
         </footer>
 
-<!--        <script defer src="media/js/cars.js"></script>-->
-        <script defer src="media/js/cars1.js"></script>
+
+        <script defer src="media/js/feedback.js"></script>
 
     </body>
 </html>

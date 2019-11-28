@@ -19,9 +19,9 @@ if (App::$session->userLoggedIn()) {
     if ($feedbacks) {
         $feedback = $feedbacks[0];
         $model->delete($feedback);
-        $response->setData($car->getData());
+        $response->setData($feedback->getData());   //***************
     } else {
-        $response->addError('Car doesn`t exist');
+        $response->addError('feedback doesn`t exist');
     }
 } else {
     $response->addError('Authorization failed!');

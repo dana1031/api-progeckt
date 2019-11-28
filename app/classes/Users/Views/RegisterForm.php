@@ -18,11 +18,7 @@ class RegisterForm extends \Core\Views\Form {
                         'validators' => [
                             'validate_not_empty',
                             'validate_alphabet_only',
-//                            'validate_number_char' => [
-//                                'min' => 1,
-//                                'max' => 40,
-//                                'error' => 'neteisingai ivestas laukas'
-//                            ],
+
                         ],
                       ],
                     ],
@@ -33,11 +29,6 @@ class RegisterForm extends \Core\Views\Form {
                         'validators' => [
                             'validate_not_empty',
                             'validate_alphabet_only',
-//                            'validate_number_char' => [
-//                                'min' => 1,
-//                                'max' => 40,
-//                                'error' => 'neteisingai ivestas laukas'
-//                            ],
                         ],
                       ],
                    ], 

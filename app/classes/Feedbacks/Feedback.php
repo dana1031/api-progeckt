@@ -2,7 +2,7 @@
 namespace App\Feedbacks;
 class Feedback {
     
-//    const MANUFACTURERS = ['bmw'=> 'BMW', 'audi' => 'Audi', 'fiat' => 'Fiat'];
+
     private $data = [];
     public function __construct($data = null) {
         if ($data) {
@@ -17,9 +17,7 @@ class Feedback {
         }
     }
     
-//    public static function getManufacturersOptions() {
-//        return self::MANUFACTURERS;
-//    }
+
     public function setData($array) {
         if (isset($array['id'])) {
             $this->setId($array['id']);
